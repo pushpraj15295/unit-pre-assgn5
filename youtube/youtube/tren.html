@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video</title>
+    <style>
+        *{
+            background-color: rgb(19,26,39);
+            color: white;
+        }
+        #show_videos{
+            display: grid;
+            grid-template-columns: repeat(4,20%);
+            gap:5%;
+        }
+        #per_video{
+            cursor: pointer;
+        }
+        #per_video>img{
+            width: 100%;
+        }
+        #navbar{
+           
+            /* text-align: center; */
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          background-color: black;
+        }
+        #navbar>img{
+            height: 100px;
+           
+           
+        }
+        #navbar>i{
+            font-size: 30px;
+           
+        }
+        #navbar>input{
+            margin-left: 20%;
+            width: 40%;
+            font-size: 30px;
+            border-radius: 10px;
+        }
+        #navbar>button{
+            font-size: 30px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        #heading{
+            text-align: center;
+            color: red;
+            font-size: 60px;
+        }
+    </style>
+    <script
+    src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous"
+  ></script>
+   
+</head>
+<body>
+    <h1 id="heading">YouTube</h1>
+    <div id="navbar">
+        <img src="https://1000logos.net/wp-content/uploads/2017/05/Color-YouTube-logo.jpg" alt="">
+        <i class="fa-solid fa-bars"></i>
+       
+        <input type="text" id="query">
+        <button onclick="searchvideos()"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div><br>
+    <div id="one_video"></div>
+</body>
+</html>
+<script>
+    she_trending=JSON.parse(localStorage.getItem("trend"))
+    console.log(she_trending)
+    let box=document.getElementById("one_video")
+let iframe=document.createElement("iframe")
+iframe.src=`https://www.youtube.com/embed/${she_trending.id}`
+iframe.width="100%";
+iframe.height="800px";
+iframe.allow="fullscreen";
+let head=document.createElement("h2")
+         head.innerText=she_trending.title;
+box.append(iframe,head)
+
+</script>
