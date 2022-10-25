@@ -1,0 +1,39 @@
+#navbar{
+   height: 40px;
+   width: 99%;
+   background-color:teal;
+   display: flex;
+   justify-content: flex-end;
+   gap:15px;
+}
+#item_count
+{
+    margin-right: 10px;
+}
+#navbar>div
+{
+    margin-top: 5px;
+    padding: 5px;
+  
+}
+#navbar>a{
+    margin-top: 5px;
+    padding: 5px;
+   
+}
+#items{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    text-align: center;
+}
+#items>div
+{
+   border: 1px solid lightgreen;
+}
+#items>div>img {
+    width: 200px;
+    height: 200px;
+}

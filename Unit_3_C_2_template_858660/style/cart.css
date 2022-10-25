@@ -1,0 +1,17 @@
+#cart{
+
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    text-align: center;
+}
+#cart>div>img
+{
+    width: 200px;
+    height: 200px;
+}
+#cart>div{
+    border: 2px solid green;
+}
